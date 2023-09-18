@@ -1,0 +1,7 @@
+<h1 appHighlight>Selected Item is: {{selectedItem}}</h1>
+
+<p *ngFor="let item of items"
+    (click)="selectItem(item)"
+>
+    {{item}}
+</p>
