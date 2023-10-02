@@ -5,18 +5,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
   templateUrl: './custom-logic.component.html',
   styleUrls: ['./custom-logic.component.scss']
 })
-export class CustomLogicComponent implements OnChanges {
-  @Input() selectedItem: string = '';
-  @Input() items: string[] = [];
+export class CustomLogicComponent {
 
-  @Output() selectItemEvent = new EventEmitter<string>();
-
-  ngOnChanges(changes: SimpleChanges): void {
-    // console.log(changes);    
-  }
-
-  public selectItem(item: string): void {    
-    this.selectItemEvent.emit(item)
-  }
 }
 

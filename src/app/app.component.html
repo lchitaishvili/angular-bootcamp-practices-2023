@@ -1,64 +1,11 @@
+<h1>This is the APP Component!</h1>
 
-<form [formGroup]="form" class="container">
-    <h2>Registration</h2>
+<button (click)="onNavigate()">
+ Click Me!
+</button>
 
-    <label>
-        Username:
-        <input formControlName="fullName" type="text">
-    </label>
+<button routerLink="dashboard">
+    Navigate to Dashboard
+</button>
 
-    <label>
-        Email:
-        <input formControlName="email">
-    </label>
-
-    <label>
-        Password:
-        <input formControlName="password">
-    </label>
-
-    <div class="address" formGroupName="address">
-        <label>
-            City:
-            <input formControlName="city">
-        </label>
-
-        <label>
-            Street:
-            <input formControlName="street">
-        </label>
-
-        <label>
-            State:
-            <input formControlName="state">
-        </label>
-
-        <label>
-            Zip:
-            <input formControlName="zip">
-        </label>
-    </div>
-
-    <div formArrayName="nicknames">
-        <div *ngFor="let nickname of nicknames.controls; let i = index">
-            <label>
-                Nickname N{{i}}:
-                <input [formControlName]="i">
-                <button (click)="deleteNickname(i)">delete</button>
-            </label>
-        </div>
-
-        <button (click)="addNickname()">Add New Nickname</button>
-    </div>
-
-    <button type="submit"
-            [disabled]="!form.valid"
-            (click)="onSubmit()"
-    >
-        Register
-    </button>
-
-    <button (click)="onReset()">Reset</button>
-
-    <h3>form status: {{form.status}}</h3>
-</form>
+<router-outlet></router-outlet>
