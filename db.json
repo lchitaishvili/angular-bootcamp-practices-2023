@@ -1,0 +1,27 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "saxeli",
+      "salary": 500,
+      "age": 18
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nickname": "nickName",
+      "email": "hmm@gmail.com",
+      "website": "www.youtube.com",
+      "phone": "+995599505050",
+      "password": "Aa123456"
+    },
+    {
+      "id": 2,
+      "name": "Luka",
+      "username": "John",
+      "email": "John@gmail.com",
+      "nickname": "Luka"
+    }
+  ]
+}

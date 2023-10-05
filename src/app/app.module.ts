@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
 import { HighlightDirective } from './highlight.directive';
 import { RouterModule } from '@angular/router';
 import { CustomDetailsComponent } from './custom-details/custom-details.component';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptor } from './auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,16 @@ import { CustomDetailsComponent } from './custom-details/custom-details.componen
     AppRoutingModule,
     FormsModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
