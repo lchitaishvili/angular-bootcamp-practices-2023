@@ -24,6 +24,10 @@ const routes: Routes = [
     canMatch: [dashboardGuard],
     loadChildren: () => import('./dashboard-v2/dashboard.module').then(m => m.DashboardModule)
   },
+  {
+    path: 'test',
+    loadComponent: () => import('./standalone-test/standalone-test.component').then(c => c.StandaloneTestComponent)
+  }
 ];
 
 @NgModule({

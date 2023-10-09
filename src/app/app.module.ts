@@ -11,13 +11,15 @@ import { RouterModule } from '@angular/router';
 import { CustomDetailsComponent } from './custom-details/custom-details.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomLogicComponent,
     HighlightDirective,
-    CustomDetailsComponent
+    CustomDetailsComponent,
+    Test2Component
   ],
   imports: [
     BrowserModule,
